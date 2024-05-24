@@ -1,7 +1,6 @@
 import java.io.File;
 import java.util.Scanner;
-//git modified try66666
-//branch change1
+//git modified try,branch change3
 public class Main {
     public static void main(String[] args) {
         //读入文件并转化为标准形式，存入graph中
@@ -85,4 +84,3 @@ public class Main {
 
 
 }
-//branch change2

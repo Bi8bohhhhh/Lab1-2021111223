@@ -1,8 +1,7 @@
 import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.Scanner;
-//branch change2
+import java.util.Scanner;   //branch change3
 public class Read {
     public void readFileToWords() {
         Scanner scanner = new Scanner(System.in);
@@ -93,4 +92,3 @@ public class Read {
     private static String resultsFileName = null;
     public DGraph graph ;
 }
-//branch change2
