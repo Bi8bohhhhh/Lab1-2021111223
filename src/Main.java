@@ -1,6 +1,7 @@
 import java.io.File;
 import java.util.Scanner;
 //git modified try
+//IDE try
 public class Main {
     public static void main(String[] args) {
         //读入文件并转化为标准形式，存入graph中
