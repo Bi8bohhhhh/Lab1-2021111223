@@ -92,3 +92,4 @@ public class Read {
     private static String resultsFileName = null;
     public DGraph graph ;
 }
+//branch change2
