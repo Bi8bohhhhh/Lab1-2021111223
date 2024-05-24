@@ -1,7 +1,7 @@
 import java.io.*;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
-import java.util.Scanner;
+import java.util.Scanner;   //branch change3
 public class Read {
     public void readFileToWords() {
         Scanner scanner = new Scanner(System.in);
