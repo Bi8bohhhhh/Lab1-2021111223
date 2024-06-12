@@ -1,16 +1,20 @@
 import java.util.Scanner;
+
 //git modified try
 //IDE try
 public class Main {
     public static void main(String[] args) {
         //读入文件并转化为标准形式，存入graph中
-        Read read_func = new Read();
-        read_func.readFileToWords();
-        read_func.readWordsToGraph();
-        Dgraph graph = read_func.graph;
-        graph.show();
+        Scanner scanner = new Scanner(System.in);
+        String fileName = null;
+        if (fileName == null) {
+            System.out.print("请输入文件名：");
+            fileName = scanner.nextLine();
+        } else {
+        }
+        Dgraph graph = createDirectedGraph(fileName);
+
         //分支选择由此开始
-        Scanner scanner = new Scanner(System.in);   //创建Scanner对象
         int choice = 0;
         while (choice != 5) {
             // 显示菜单选项
@@ -82,5 +86,14 @@ public class Main {
         return scanner.nextInt();
     }
 
+    public static Dgraph createDirectedGraph(String fileName) {
+        Read read_func = new Read();
+        read_func.readFileToWords(fileName);
+        read_func.readWordsToGraph();
+        Dgraph graph = read_func.graph;
+        String result = graph.show();
+        System.out.println(result);
+        return graph;
+    }
 
 }

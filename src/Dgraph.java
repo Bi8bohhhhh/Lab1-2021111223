@@ -43,26 +43,29 @@ public class Dgraph {
         adj[index1].addNode(word2, index2);
     }
 
-    public void show() {
+    public String show() {
+        StringBuilder output = new StringBuilder();
         for (int i = 0; i < vertex; i++) {
             Node currentNode = adj[i].getHead();
-            System.out.print(currentNode.word + ": ");
+            output.append(currentNode.word).append(": ");
 
             // 遍历当前节点的相邻节点
             Node adjacentNode = currentNode.next;
             if (adjacentNode == null) {
-                System.out.println("null");
+                output.append("null").append("\n");
             } else {
                 StringBuilder adjacentNodesStr = new StringBuilder();
                 while (adjacentNode != null) {
-                    adjacentNodesStr.append(adjacentNode.word).append(",");
+                    adjacentNodesStr.append(adjacentNode.word).append("-").append(adjacentNode.weight).append(",");
                     adjacentNode = adjacentNode.next;
                 }
                 // 去掉最后一个逗号
                 adjacentNodesStr.deleteCharAt(adjacentNodesStr.length() - 1);
-                System.out.println(adjacentNodesStr);
+                output.append(adjacentNodesStr).append("\n");
             }
         }
+        //System.out.println(output);
+        return output.toString();
     }
 
     public String queryBridgeWords(String word1, String word2) {
