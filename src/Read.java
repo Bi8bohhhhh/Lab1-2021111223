@@ -5,9 +5,9 @@ import java.util.Scanner;
 public class Read {
     public void readFileToWords() {
         Scanner scanner = new Scanner(System.in);
-        //System.out.print("请输入文件名：");
-        //fileName = scanner.nextLine();
-        fileName = "test.txt";
+        System.out.print("请输入文件名：");
+        fileName = scanner.nextLine();
+        //fileName = "test.txt";
         //System.out.println("输入的文件名为：" + fileName);
 
         File file = new File(fileName);
@@ -49,7 +49,7 @@ public class Read {
     }
 
     public void readWordsToGraph() {
-        graph = new DGraph();
+        graph = new Dgraph();
         resultsFileName = "Result_"+fileName.substring(0, fileName.length()-4);
         File file = new File(resultsFileName);
         BufferedReader reader = null;
@@ -90,5 +90,5 @@ public class Read {
     }
     private static String fileName = null;
     private static String resultsFileName = null;
-    public DGraph graph ;
+    public Dgraph graph ;
 }

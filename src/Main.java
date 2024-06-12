@@ -1,4 +1,3 @@
-import java.io.File;
 import java.util.Scanner;
 //git modified try
 //IDE try
@@ -8,8 +7,8 @@ public class Main {
         Read read_func = new Read();
         read_func.readFileToWords();
         read_func.readWordsToGraph();
-        DGraph graph = read_func.graph;
-        graph.Show();
+        Dgraph graph = read_func.graph;
+        graph.show();
         //分支选择由此开始
         Scanner scanner = new Scanner(System.in);   //创建Scanner对象
         int choice = 0;
